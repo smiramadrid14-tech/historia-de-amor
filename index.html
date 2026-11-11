@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro recuerdo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="bienvenida" id="bienvenidaMusical">
+        <div class="bienvenida-contenido">
+            <p class="pequeno">UN RECUERDO ESPECIAL</p>
+            <h1>Hay historias que nunca se olvidan</h1>
+            <p>Aunque pienses que ya todo se acabó, déjame decirte que estás pensando con los pies. Haz silencio y escucha cómo estoy en estos momentos.<br>Sube el volumen a tope y dale comenzar.</p>
+            <button id="comenzarMusica">Comenzar nuestro recuerdo ❤️</button>
+        </div>
+    </div>
+
+    <audio id="musicaFondo" preload="auto">
+    <source src="audio/nuestra-cancion.mp3" type="audio/mpeg">
+</audio>
+
+    <header>
+        <nav class="navbar">
+            <a href="#inicio" class="logo">Nuestro recuerdo</a>
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#inicio">Inicio</a>
+                <a href="#historia">Nuestra historia</a>
+                <a href="#recuerdos">Recuerdos</a>
+                <a href="#carta">Una carta</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="inicio" id="inicio">
+            <p class="pequeno">CON CARIÑO - TU OJITOS LINDOS</p>
+            <h1>Algunas personas dejan huellas para siempre</h1>
+            <p>
+                Aunque ya no estemos juntos, tú eres ese pedazo que le hace falta a mi corazón.
+            </p>
+            <a href="#historia" class="boton">Recordar nuestra historia</a>
+        </section>
+
+        <section class="historia seccion" id="historia">
+            <p class="pequeno">UNA COINCIDENCIA</p>
+            <h2>Nuestra historia</h2>
+
+            <p>
+               ¡Cómo pasa el tiempo! Hace ayer que estábamos comenzando nuestra historia y hace hoy que se siente como si estuviera en una cuerda floja a punto de caer al abismo, pero entender que todo en la vida es un aprendizaje. Los errores que cometemos hoy, mañana ya no los volvemos a cometer. Aunque tuvimos peleas, tuvimos días felices, etc., seguíamos avanzando e insistiendo en que sí funcionaría, pero ¿cuál fue ese impulso que logró que lo nuestro terminara? Pues es algo de otro planeta, porque ni en mil vidas podrían quitar la conexión que hubo entre dos almas totalmente diferentes, con destinos y caminos diferentes. No creas que esto es IA, por cierto. -- I LOVE YOU --.
+            </p>
+
+            <p>
+                Tal vez las cosas no salieron como alguna vez imaginamos,
+                pero eso no significa que lo vivido haya perdido su valor.
+                Cada momento tuvo su significado. Como también existe aquella posibilidad de arreglar y organizar un futuro. Siempre quise tener la del proceso, aunque es complicado porque es complejo, pero así como dicen: "Trabaja hoy para disfrutar luego el resto de tu vida", frase que marca, motiva e inspira. Estamos en una etapa en donde somos indecisos, donde dependemos de la más mínima cosa que pase en nuestras vidas. Por ello, creé esta página para ti. Para que sepas que la llama del amor no se ha apagado.
+            </p>
+        </section>
+
+        <section class="recuerdos seccion" id="recuerdos">
+            <p class="pequeno">MOMENTOS ESPECIALES</p>
+            <h2>Algunos recuerdos</h2>
+
+            <p class="descripcion">
+                Cada fotografía tiene un valor único que tú y yo sabemos cómo se sintió.
+            </p>
+
+            <div class="carrusel">
+
+                <button class="flecha" id="anterior">❮</button>
+
+                <div class="carrusel-contenido">
+                    <img src="img/recuerdo1.jpg" id="imagenCarrusel" alt="Nuestro recuerdo">
+                    <p id="textoCarrusel">Un momento para recordar ❤️</p>
+                </div>
+
+                <button class="flecha" id="siguiente">❯</button>
+
+            </div>
+
+            <div class="puntos" id="puntosCarrusel"></div>
+        </section>
+
+        <section class="reflexiones seccion">
+            <p class="pequeno">FAMILIA</p>
+            <h2>Árbol genealógico</h2>
+
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <img src="img/recuerdo.jpg" alt="Santiago">
+                </article>
+
+                <article class="tarjet">
+                    <img src="img/ted.jpg" alt="Luisangela">
+                    <img src="img/snnopy.jpg" alt="Luisangela">
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/recuerdom.jpg" alt="Luisangela">
+                
+                </article>
+            </div>
+        </section>
+
+        <section class="palabras seccion">
+            <p class="pequeno">SANTIAGO & LUISANGELA</p>
+            <h2>EN EL MUELLE DE SAN BLAS</h2>
+
+            <p>
+            Y si esperar es de locos, entonces seré el hombre más loco en este mundo.
+            </p>
+
+            <p>
+               SANTIAGO X LUISANGELA</p>
+            <p>
+               LUISANGELA X SANTIAGO
+            </p>
+        </section>
+
+        <section class="carta seccion" id="carta">
+            <p class="pequeno">LUISANGELA</p>
+            <h2>Una carta para ti</h2>
+
+            <button id="botonCarta" class="boton">
+                Abrir carta 💌
+            </button>
+
+            <div class="contenido-carta" id="contenidoCarta">
+                <p>
+                    No quería dejar pasar la oportunidad de expresar
+                    lo que significó esta etapa.
+                </p>
+
+                <p>
+                    Gracias por los momentos compartidos, por las
+                    experiencias y por cada recuerdo que hoy forma
+                    parte de mi historia.
+                </p>
+
+                <p>
+                    No escribo estas palabras para cambiar el pasado
+                    ni para pedirte nada. Simplemente quería que
+                    supieras que hubo cosas bonitas que siempre
+                    voy a recordar con cariño.
+                    
+                    ATT: Ojitos lindos
+                </p>
+
+                <p>
+                 
+                </p>
+
+                <p class="firma">Con cariño ❤️</p>
+            </div>
+        </section>
+
+        <section class="despedida">
+            <h2>Los recuerdos permanecen</h2>
+            <p>
+                Gracias por haber sido parte de una historia
+                que siempre tendrá un lugar en mi memoria, pero la pregunta es: ¿Habrá otra oportunidad?...
+            </p>
+            <span>❤️</span>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Hecho con cariño y buenos recuerdos.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,600 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #faf5f0;
+    color: #463b38;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* BIENVENIDA */
+
+.bienvenida {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #5b373e, #a66f76);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    z-index: 1000;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.bienvenida.oculta {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.bienvenida-contenido {
+    max-width: 650px;
+    width: 100%;
+    color: white;
+}
+
+.bienvenida h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin: 20px 0;
+}
+
+.bienvenida p {
+    margin-bottom: 25px;
+}
+
+/* BOTONES */
+
+button,
+.boton {
+    background-color: #b87980;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+button:hover,
+.boton:hover {
+    background-color: #91575f;
+    transform: translateY(-3px);
+}
+
+/* NAVEGACIÓN */
+
+header {
+    background-color: #fffaf7;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #91575f;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Georgia, serif;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #594744;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b87980;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* INICIO */
+
+.inicio {
+    min-height: 620px;
+    background: linear-gradient(rgba(65,38,42,0.65), rgba(65,38,42,0.65)),
+    url("../img/recuerdo1.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.inicio h1 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.inicio p {
+    max-width: 650px;
+    margin-bottom: 25px;
+}
+
+/* SECCIONES */
+
+.seccion {
+    max-width: 1050px;
+    margin: auto;
+    padding: 85px 25px;
+    text-align: center;
+}
+
+.pequeno {
+    color: #b87980;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.seccion h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    color: #754c51;
+    margin: 12px 0 25px;
+}
+
+/* HISTORIA */
+
+.historia p:not(.pequeno) {
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+/* RECUERDOS Y CARRUSEL */
+
+.recuerdos {
+    max-width: 100%;
+    background-color: #f1e5df;
+}
+
+.descripcion {
+    margin-bottom: 30px;
+}
+
+.carrusel {
+    max-width: 850px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carrusel-contenido {
+    width: 100%;
+    max-width: 650px;
+    min-width: 0;
+}
+
+.carrusel-contenido img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.carrusel-contenido p {
+    margin-top: 15px;
+    font-family: Georgia, serif;
+    font-size: 19px;
+}
+
+.flecha {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    flex-shrink: 0;
+    font-size: 20px;
+}
+
+.puntos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.punto {
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    background-color: #c9aaa5;
+    border-radius: 50%;
+}
+
+.punto.activo {
+    background-color: #91575f;
+}
+
+/* ÁRBOL GENEALÓGICO */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.tarjeta h3 {
+    color: #91575f;
+    margin-bottom: 15px;
+    font-family: Georgia, serif;
+}
+
+.tarjetas img {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tarjet img {
+    height: 250px;
+    width: 150px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* PALABRAS */
+
+.palabras {
+    background-color: #fffaf7;
+    max-width: 100%;
+}
+
+.palabras p:not(.pequeno) {
+    max-width: 750px;
+    margin: 15px auto;
+}
+
+/* CARTA */
+
+.contenido-carta {
+    display: none;
+    max-width: 700px;
+    width: 100%;
+    margin: 30px auto 0;
+    padding: 35px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.contenido-carta.visible {
+    display: block;
+    animation: aparecer 0.7s ease;
+}
+
+.contenido-carta p {
+    margin-bottom: 18px;
+}
+
+.firma {
+    color: #91575f;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    text-align: right;
+}
+
+/* DESPEDIDA */
+
+.despedida {
+    background: linear-gradient(135deg, #5b373e, #a66f76);
+    color: white;
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.despedida h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.despedida p {
+    max-width: 650px;
+    margin: auto;
+}
+
+.despedida span {
+    display: block;
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #39292b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+/* ANIMACIONES */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TABLETAS */
+
+@media (max-width: 900px) {
+
+    .seccion {
+        padding: 65px 25px;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .inicio h1 {
+        font-size: 40px;
+    }
+
+    .carrusel-contenido img {
+        height: 350px;
+    }
+
+}
+
+/* CELULARES */
+
+@media (max-width: 700px) {
+
+    /* NAVEGACIÓN */
+
+    .navbar {
+        flex-wrap: wrap;
+        padding: 13px 18px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .menu-toggle {
+        display: block;
+        padding: 9px 14px;
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0 5px;
+        gap: 12px;
+    }
+
+    .nav-links.abierto {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 5px 0;
+    }
+
+    /* BIENVENIDA */
+
+    .bienvenida {
+        padding: 20px;
+    }
+
+    .bienvenida h1 {
+        font-size: 30px;
+    }
+
+    .bienvenida p {
+        font-size: 14px;
+    }
+
+    /* INICIO */
+
+    .inicio {
+        min-height: 520px;
+        padding: 35px 18px;
+    }
+
+    .inicio h1 {
+        font-size: 34px;
+    }
+
+    .inicio p {
+        font-size: 15px;
+    }
+
+    /* SECCIONES */
+
+    .seccion {
+        padding: 60px 18px;
+    }
+
+    .seccion h2 {
+        font-size: 29px;
+    }
+
+    .pequeno {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    /* CARRUSEL */
+
+    .carrusel {
+        gap: 8px;
+    }
+
+    .carrusel-contenido img {
+        height: 270px;
+        border-radius: 10px;
+    }
+
+    .carrusel-contenido p {
+        font-size: 16px;
+    }
+
+    .flecha {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+        padding: 0;
+    }
+
+    .puntos {
+        gap: 8px;
+    }
+
+    /* ÁRBOL GENEALÓGICO */
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tarjeta {
+        padding: 22px 15px;
+    }
+
+    .tarjetas img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .tarjet img {
+        width: 130px;
+        height: 200px;
+    }
+
+    /* CARTA */
+
+    .contenido-carta {
+        padding: 22px 18px;
+    }
+
+    .firma {
+        font-size: 19px;
+    }
+
+    /* DESPEDIDA */
+
+    .despedida {
+        padding: 65px 18px;
+    }
+
+    .despedida h2 {
+        font-size: 29px;
+    }
+
+    .despedida p {
+        font-size: 14px;
+    }
+
+}
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .bienvenida h1 {
+        font-size: 26px;
+    }
+
+    .inicio h1 {
+        font-size: 29px;
+    }
+
+    .seccion h2 {
+        font-size: 26px;
+    }
+
+    .carrusel {
+        gap: 5px;
+    }
+
+    .carrusel-contenido img {
+        height: 220px;
+    }
+
+    .flecha {
+        width: 29px;
+        height: 29px;
+        font-size: 12px;
+    }
+
+    .tarjet img {
+        width: 110px;
+        height: 170px;
+    }
+
+}
